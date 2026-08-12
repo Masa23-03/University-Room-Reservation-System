@@ -1,0 +1,14 @@
+<odoo>
+    <menuitem id="room_reservation_root_menu" name="Room Reservation">
+        <menuitem
+            id="room_reservation_first_level_menu"
+            name="Settings">
+            <menuitem
+                id="room_type_model_menu_action"
+                name="Room Types"
+                action="room_type_action" />
+        </menuitem>
+    </menuitem>
+
+
+</odoo>
