@@ -1,6 +1,6 @@
 {
     'name':'Room Reservation',
-    'depends':['base' , 'calendar'],
+    'depends':['base' ],
     'application': True,
     'data': [
         'security/ir.model.access.csv'
