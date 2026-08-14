@@ -1,2 +1,3 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_room_type,access_room_type,model_room_type,base.group_user,1,1,1,1
+access_lab_type,access_lab_type,model_lab_type,base.group_user,1,1,1,1
+access_lab_room,access_lab_room,model_lab_room,base.group_user,1,1,1,1
