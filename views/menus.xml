@@ -1,18 +1,27 @@
 <odoo>
-    <menuitem id="room_reservation_root_menu" name="Room Reservation">
-        <menuitem
-            id="room_reservation_first_level_menu"
-            name="Settings">
-            <menuitem
-                id="room_model_menu_action"
-                name="Room"
-                action="room_action" />
-            <menuitem
-                id="room_type_model_menu_action"
-                name="Room Types"
-                action="room_type_action" />
-        </menuitem>
-    </menuitem>
 
+    <menuitem
+        id="lab_reservation_root_menu"
+        name="Lab Reservation">
+
+        <menuitem
+            id="lab_reservation_first_level_menu"
+            name="Settings">
+
+            <menuitem
+                id="lab_room_model_menu_action"
+                name="Labs"
+                action="lab_room_action"
+            />
+
+            <menuitem
+                id="lab_type_model_menu_action"
+                name="Lab Types"
+                action="lab_type_action"
+            />
+
+        </menuitem>
+
+    </menuitem>
 
 </odoo>

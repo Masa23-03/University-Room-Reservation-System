@@ -1,5 +1,5 @@
 {
-    'name':'Room Reservation',
+    'name':'Lab Reservation',
     'depends':['base' ],
     'application': True,
     'data': [

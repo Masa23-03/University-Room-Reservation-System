@@ -1,1 +1,1 @@
-from . import room_type , lab_room
+from . import lab_type , lab_room
