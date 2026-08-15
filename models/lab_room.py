@@ -19,3 +19,8 @@ class LabRoom(models.Model):
         "UNIQUE(name)",
         "Lab name must be unique.",
     )
+
+    _check_capacity=models.Constraint(
+        "CHECK(capacity>0)",
+        "Lab capacity must be greater than zero.",
+    )
