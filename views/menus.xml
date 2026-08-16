@@ -2,26 +2,36 @@
 
     <menuitem
         id="lab_reservation_root_menu"
-        name="Lab Reservation">
+        name="Lab Reservation"
+    />
 
-        <menuitem
-            id="lab_reservation_first_level_menu"
-            name="Settings">
+    <menuitem
+        id="lab_reservation_settings_menu"
+        name="Settings"
+        parent="lab_reservation_root_menu"
+        groups="group_lab_supervisor"
+    />
 
-            <menuitem
-                id="lab_room_model_menu_action"
-                name="Labs"
-                action="lab_room_action"
-            />
+    <menuitem
+        id="lab_room_model_menu_action"
+        name="Labs"
+        parent="lab_reservation_settings_menu"
+        action="lab_room_action"
+    />
 
-            <menuitem
-                id="lab_type_model_menu_action"
-                name="Lab Types"
-                action="lab_type_action"
-            />
+    <menuitem
+        id="lab_type_model_menu_action"
+        name="Lab Types"
+        parent="lab_reservation_settings_menu"
+        action="lab_type_action"
+    />
 
-        </menuitem>
+    <menuitem 
+    id="lab_requirement_model_menu_action"
+    name="Lab Requirements"
+    parent="lab_reservation_settings_menu"
+    action="lab_requirement_action"
+    />
 
-    </menuitem>
 
 </odoo>

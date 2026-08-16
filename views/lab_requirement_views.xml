@@ -1,0 +1,36 @@
+<odoo>
+
+    <record id="lab_requirement_view_form" model="ir.ui.view">
+        <field name="name">lab.requirement.form</field>
+        <field name="model">lab.requirement</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="description" />
+
+                    </group>
+                    <group>
+                        <field name="lab_type_ids" widget="many2many_tags" />
+                    </group>
+
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="lab_requirement_action" model="ir.actions.act_window">
+        <field name="name">Lab Requirements</field>
+        <field name="res_model">lab.requirement</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

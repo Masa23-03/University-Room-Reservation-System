@@ -1,3 +1,13 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_lab_type,access_lab_type,model_lab_type,base.group_user,1,1,1,1
-access_lab_room,access_lab_room,model_lab_room,base.group_user,1,1,1,1
+access_lab_type_requester,lab.type.requester,model_lab_type,group_lab_requester,1,0,0,0
+access_lab_type_lab_supervisor,lab.type.supervisor,model_lab_type,group_lab_supervisor,1,1,1,1
+
+
+access_lab_room_requester,lab.room.requester,model_lab_room,group_lab_requester,1,0,0,0
+access_lab_room_supervisor,lab.room.supervisor,model_lab_room,group_lab_supervisor,1,1,1,1
+
+
+access_lab_requirement_requester,lab.requirement.requester,model_lab_requirement,group_lab_requester,1,0,1,0
+access_lab_requirement_supervisor,lab.requirement.supervisor,model_lab_requirement,group_lab_supervisor,1,1,1,1
+
+access_lab_reservation_requester,lab.reservation.requester,model_lab_reservation,group_lab_requester,1,1,1,0

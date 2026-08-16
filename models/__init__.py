@@ -1,1 +1,1 @@
-from . import lab_type , lab_room
+from . import lab_type , lab_room , lab_requirement , lab_reservation

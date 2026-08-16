@@ -5,7 +5,7 @@ class LabRequirement(models.Model):
     _description="Lab Requirement Model"
 
     name=fields.Char(required=True)
-    lab_type_id= fields.Many2many("lab.type" , string="Applicable Lab Type",required=True)
+    lab_type_ids= fields.Many2many("lab.type" , string="Applicable Lab Type",required=True)
     description=fields.Text()
 
     _check_name=models.Constraint(

@@ -1,0 +1,10 @@
+<odoo>
+    <record id="seq_lab_reservation" model="ir.sequence">
+        <field name="name">Lab Reservation</field>
+        <field name="code">lab.reservation</field>
+        <field name="prefix">RS-</field>
+        <field name="padding">5</field>
+
+    </record>
+
+</odoo>

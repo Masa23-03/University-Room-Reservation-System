@@ -1,0 +1,85 @@
+<odoo>
+    <record id="lab_reservation_requester_view_form" model="ir.ui.view">
+        <field name="name">lab.reservation.requester.form</field>
+        <field name="model">lab.reservation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit" type="object" string="Submit" class="btn-primary"
+                        invisible="state != 'draft'" />
+                    <button name="action_cancel" type="object" string="Cancel"
+                        invisible="state not in ['draft' , 'pending' , 'confirmed']" />
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,pending,confirmed,completed"
+                        options="{'clickable' :False}" />
+
+
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+
+                    </div>
+
+                    <group>
+                        <group string="Reservation Details">
+                            <field name="requester_id" readonly="1" />
+                            <field name="purpose" />
+                            <field name="course_name" />
+                            <field name="number_of_participants" />
+
+                        </group>
+
+                        <group string="Schedule">
+                            <field name="start_datetime" />
+                            <field name="end_datetime" />
+                        </group>
+
+                    </group>
+
+                    <group string="Labs">
+                        <field name="lab_ids" widget="many2many_tags"
+                            options="{'no_create': True, 'no_create_edit': True}" />
+
+                    </group>
+
+                    <group string="Requirements">
+                        <field name="requirement_ids" widget="many2many_tags" />
+                        <field name="notes" />
+                    </group>
+
+                    <group string="Rejected" invisible="state != 'rejected'">
+                        <field name="rejection_reason" readonly="1" />
+
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="lab_reservation_requester_view_list" model="ir.ui.view">
+        <field name="name">lab.reservation.requester.list</field>
+        <field name="model">lab.reservation</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="purpose" />
+                <field name="start_datetime" />
+                <field name="end_datetime" />
+                <field name="lab_ids" widget="many2many_tags" />
+                <field name="state" />
+
+            </list>
+        </field>
+    </record>
+    <record id="lab_reservation_requester_action" model="ir.actions.act_window">
+        <field name="name">Lab Reservation</field>
+        <field name="res_model">lab.reservation</field>
+        <field name="view_mode">list,form</field>
+
+    </record>
+</odoo>
