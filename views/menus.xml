@@ -26,11 +26,19 @@
         action="lab_type_action"
     />
 
-    <menuitem 
-    id="lab_requirement_model_menu_action"
-    name="Lab Requirements"
-    parent="lab_reservation_settings_menu"
-    action="lab_requirement_action"
+    <menuitem
+        id="lab_requirement_model_menu_action"
+        name="Lab Requirements"
+        parent="lab_reservation_settings_menu"
+        action="lab_requirement_action"
+    />
+
+    <menuitem
+        id="lab_reservation_requester_model_menu_action"
+        name="Reservations"
+        parent="lab_reservation_root_menu"
+        action="lab_reservation_requester_action"
+        groups="group_lab_requester"
     />
 
 
